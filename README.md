@@ -30,7 +30,7 @@ val text: File => String =
 All of the example code here is taken from the [examples section](https://github.com/Nitro/scalda/blob/master/src/main/scala/com/nitro/scalda/examples/) in this repo.It creates an iterator over minibatches of documents from the NIPS corpus in this repo's [data sets section](https://github.com/Nitro/scalda/tree/master/datasets).
 
 
-###Train an LDA model locally
+### Train an LDA model locally
 To train an LDA model locally you need:
 
 1. An iterator over minibatches of documents.  A document is simply a ```String``` of the document contents.  A minibatch of documents is therefore an ```IndexedSeq[String]``` where the size of the minibatch is choosen by the user.  Therefore an iterator over minibatches is a ```Iterator[IndexedSeq[String]]```.   How this iterator is created depends on the particular way your documents are stored (i.e. local file system, S3, etc.) therefore it is up to the user to provide this iterator.
