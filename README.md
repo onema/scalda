@@ -1,5 +1,5 @@
 
-#scaLDA - Nitro's Open Source Topic Modeling Library
+# scaLDA - Nitro's Open Source Topic Modeling Library
 
 Welcome to scaLDA! This library allows you to train your very own [Latent Dirichlet Allocation (LDA)](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation) topic models in Scala and Spark.  Specifically, this library is an implementation of the Online LDA algorithm presented in [_Online Learning for Latent Dirichlet Allocation_, Hoffman et al.](https://www.cs.princeton.edu/~blei/papers/HoffmanBleiBach2010b.pdf).   
 
@@ -92,7 +92,7 @@ class TextFileIterator(
 ```
 
 
-###Train an LDA Model with Spark
+### Train an LDA Model with Spark
 You can train an LDA model with Spark in an analogous way. You need:
 
 1. An iterator over RDDs of documents.  Documents are again treated as ```String```'s.  However, this time a minibatch is represented by an ``RDD[string]`` so that we can perform operations on minibatches in parallel.  
@@ -164,7 +164,7 @@ class TextFileRddIterator(
 ```
 
 
-###Infer Topic Proportions for a Document
+### Infer Topic Proportions for a Document
 Once you have trained your LDA model, you might want to infer the proportions of the learned topics within a given document.  This is a great way to learn the 'concepts' and 'themes' that are present in a document based on its high probability topics.
 
 The following example loads a previous learned and serialized model and uses it to infer the topic proportions for a given document.
@@ -198,7 +198,7 @@ object TopicProportionsExample extends App {
 }
 ```
 
-###Compute Document Similarity Example
+### Compute Document Similarity Example
 Once you have trained your LDA model, you might want to use inferred topic distributions to compute a pairwise document similarity. The following example does this using the topics of a learned LDA model as the vector space, inferred proportions as the document's vector, and the cosine similarity metric.
 
 ```scala
@@ -237,7 +237,7 @@ object TopicProportionsExample extends App {
 }
 ```
 
-###Compute Top Topic Word Coherence 
+### Compute Top Topic Word Coherence 
 Once you have trained your LDA model, you often want to find out whether or not the learned topics are useful and coherent.
 
 One technique is to look at the top words (by probability) for each topic and compute the average cosine similarity of all of a topic's top word vectors.
