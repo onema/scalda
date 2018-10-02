@@ -12,7 +12,8 @@ Things you can do with scaLDA:
 
 Check out some examples of how you can use scaLDA in this repo's [examples section](https://github.com/Nitro/scalda/blob/master/src/main/scala/com/nitro/scalda/examples/).
 
-##Examples
+
+# Examples
 
 Assume the following imports and definitions are in scope for *all examples*:
 ```scala
